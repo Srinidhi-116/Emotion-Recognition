@@ -1,6 +1,6 @@
 function analyzeEmotion() {
     const inputText = document.getElementById('input').value;
-    fetch(` https://emorecog.netlify.app/emotion?text=${encodeURIComponent(inputText)}`)
+    fetch(` https://emorecog1.netlify.app/emotion?text=${encodeURIComponent(inputText)}`)
         .then(response => response.json())
         .then(data => {
             const emoji = getEmojiForScore(data.score);
