@@ -1,13 +1,13 @@
 function analyzeEmotion() {
     const inputText = document.getElementById('input').value;
-    fetch(` https://emorecog1.netlify.app/emotion?text=${encodeURIComponent(inputText)}`)
+    fetch(`emorecog1.netlify.app/emotion?text=${encodeURIComponent(inputText)}`)
         .then(response => response.json())
         .then(data => {
             const emoji = getEmojiForScore(data.score);
             document.getElementById('emojiDisplay').innerText = emoji;
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.log('Error:'+ error);
         });
 }
 
